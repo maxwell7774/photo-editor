@@ -3,7 +3,7 @@
 
 int main() {
     printf("Welcome to my photo editor!\n");
-    FILE *image_ptr = fopen("image.jpeg", "r");
+    FILE *image_ptr = fopen("res/image.jpeg", "r");
     if(image_ptr == NULL) {
         printf("File could not be opened\n");
         return 1;
