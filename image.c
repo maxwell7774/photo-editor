@@ -64,10 +64,12 @@ bool save_image(jpeg_t *image_ptr, char *filename) {
 
     FILE *fp = fopen(path, "w");
     if(fp == NULL) {
+        free(path);
         return false;
     }
     fwrite(image_ptr->data, sizeof(uint8_t), image_ptr->size, fp);
     fclose(fp);
+    printf("SAVED IMAGE SUCCESSFULLY\n");
 
     free(path);
     return true;
