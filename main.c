@@ -22,6 +22,8 @@ int main() {
     return 1;
   }
 
+  printf("FREEING JPEG\n");
   free_jpeg(jpeg);
+  printf("FREED JPEG\n");
   return 0;
 }
